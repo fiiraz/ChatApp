@@ -1,4 +1,4 @@
-package com.chatapplication.chatapplication;
+package com.example.testflutterfilse;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

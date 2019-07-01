@@ -1,28 +1,37 @@
-name: chatapplication
-description: chatapplication
+name: simplefire
+description: Simple Fire Flutter App
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
 # followed by an optional build number separated by a +.
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# Read more about versioning at semver.org.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
+  http: any
+  sqflite: any
+  path_provider: any
+  shared_preferences: any
+  flutter_masked_text: ^0.7.0
+  validate: any
+  rxdart: 0.20.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  event_bus: any
+  url_launcher: any
+  device_info: any
+  loadmore: any
+  smooth_star_rating: ^1.0.1
+  cached_network_image: ^0.7.0
+
 
 dev_dependencies:
   flutter_test:
@@ -46,10 +55,10 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # https://flutter.io/assets-and-images/#resolution-aware.
 
   # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  # https://flutter.io/assets-and-images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -69,4 +78,17 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  # see https://flutter.io/custom-fonts/#from-packages
+  assets:
+    - assets/images/logo.png
+    - assets/images/logo_sm.png
+    - assets/images/sock1.jpeg
+    - assets/images/sock2.jpeg
+    - assets/images/sock3.jpeg
+# https://www.dartlang.org/guides/language/analysis-options
+analyzer:
+  strong-mode: true
+  errors:
+    mixin_inherits_from_not_object: ignore
+  language:
+      enableSuperMixins: true
